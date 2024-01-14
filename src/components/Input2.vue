@@ -3,6 +3,7 @@ import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <template>
+    <img class="answr_logo" src="\logo_svg_.svg" alt="">
 <form action="" class="form">
     <p class="answr_text">About you</p>
         <div class="input-group">

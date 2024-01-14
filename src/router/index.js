@@ -5,6 +5,7 @@ import Input1 from '../components/Input1.vue'
 import Input2 from '../components/Input2.vue'
 import NDA from '../components/NDA.vue'
 import Speech from '../components/Speech.vue'
+import Video from '../components/Video.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -36,6 +37,10 @@ const router = createRouter({
     {
       path: '/nda',
       component: NDA
+    },
+    {
+      path: '/video',
+      component: Video
     }
   ]
 })

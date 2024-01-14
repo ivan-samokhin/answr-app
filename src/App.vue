@@ -2,6 +2,7 @@
 import { RouterLink, RouterView } from 'vue-router'
 import Capcha from './components/Capcha.vue'
 import ChatBot from './components/ChatBot.vue'
+import Video from './components/Video.vue'
 
 </script>
 <script>
@@ -12,7 +13,9 @@ export default {
       isLogged: true,
       hoverCam: false,
       hoverMic: false,
-      micActivated: false
+      micActivated: false,
+      avatarOn: false,
+      hoverAvatar: false
       
   }
 }
@@ -43,7 +46,7 @@ export default {
         </ul>
 
         <ul class="nav_icons_list icons_center">
-            <li class="nav_icon_item">
+            <li class="nav_icon_item" @mouseover="hoverAvatar=true" @mouseleave="hoverAvatar=false" @click="avatarOn=!avatarOn">
                <img class="nav_icon_image" src="\person_svg_.svg" alt="">
             </li>
             <li class="nav_icon_item" @mouseover="hoverCam=true" @mouseleave="hoverCam=false">
@@ -74,6 +77,7 @@ export default {
 
       <div class="hoverbox" v-if="hoverCam"></div>
       <div class="hoverbox mic_hover" v-if="hoverMic"><p>Enable dictation</p></div>
+      <div class="hoverbox avatar_hover" v-if="hoverAvatar"><p>Choose avatar</p></div>
 
     </div>
   </header>
@@ -84,6 +88,7 @@ export default {
   <!-- <ChatBot/> -->
   <!-- <Capcha/>-->
   <router-view :micActive="micActivated"/>
+  <Transition  ><Video v-if="avatarOn"></Video></Transition>
   
   <!--<button @click="console.log(isLoggedIn)" type="">Test</button>-->
 </div>
@@ -229,7 +234,12 @@ nav a:first-of-type {
   left: 290px;
 }
 
-
+.avatar_hover {
+  left: 50%;
+  margin-left: -110px;
+}
+.swiper-scrollbar-drag { color: white;}
+.swiper-button-prev, .swiper-button-next {color: white;}
 
 }
 

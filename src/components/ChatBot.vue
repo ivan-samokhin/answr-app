@@ -1,6 +1,7 @@
 <script setup>
 import { toHandlers } from 'vue';
 import { isLoggedIn } from './Capcha.vue'
+
 </script>
 <template>
 

@@ -26,7 +26,9 @@ import { isLoggedIn } from './Capcha.vue'
         <img src="\ARROW_UP.svg" alt="">
     </form>
 </div>
+<Transition name="dictation">
 <div class="speech_indicator" @click="startSpeechToTxt" v-if="micActive"> <img src="\mic_svg_.svg" alt=""></div>
+</Transition>
 
 
 
@@ -239,10 +241,14 @@ textarea:focus, input:focus{
 }
 
 .empty-enter-active,
-.empty-leave-active {
+.empty-leave-active,
+.dictation-enter-active,
+.dictation-leave-active {
   transition: opacity 0.5s ease;
 }
 
+.dictation-enter-from,
+.dictation-leave-to,
 .empty-enter-from,
 .empty-leave-to {
   opacity: 0;

@@ -11,6 +11,7 @@ export default {
       title: 'Cassandra',
       isLogged: true,
       hoverCam: false,
+      hoverMic: false,
       micActivated: false
       
   }
@@ -19,7 +20,7 @@ export default {
 </script>
 
 <template>
-<Transition>
+
   <header v-if="isLogged">
     <div class="wrapper">
       <nav>
@@ -36,7 +37,7 @@ export default {
             <li class="nav_icon_item">
                <img class="nav_icon_image" src="\write_svg_.svg" alt="">
             </li>
-           <li class="nav_icon_item" @click="micActivated=true">
+           <li class="nav_icon_item" @mouseover="hoverMic=true" @mouseleave="hoverMic=false" @click="micActivated=true">
                <img class="nav_icon_image" src="\mic_svg_.svg" alt="">
             </li>
         </ul>
@@ -72,10 +73,11 @@ export default {
       </nav>
 
       <div class="hoverbox" v-if="hoverCam"></div>
+      <div class="hoverbox mic_hover" v-if="hoverMic"><p>Enable dictation</p></div>
 
     </div>
   </header>
-</Transition>
+
  
 <div id="main">
   
@@ -213,9 +215,21 @@ nav a:first-of-type {
     margin-left: -75px;
     width: 150px;
     height: 50px;
-    background-color: #888;
-    border-radius: 5px;
+    background-color: #202020;
+    border-radius: 3px;
+    color: white;
+    text-align: center;
 }
+.hoverbox p {
+  font-size: 0.8rem;
+  padding-top: 15px;
+}
+
+.mic_hover {
+  left: 290px;
+}
+
+
 
 }
 

@@ -214,14 +214,14 @@ textarea:focus, input:focus{
 }
 
 .chat_popup_start {
-    width: 150px;
+    width: 300px;
     height: 150px;
     
     position: fixed;
     top: 50%;
     left: 50%;
     margin-top: -75px;
-    margin-left: -75px;
+    margin-left: -150px;
 }
 
 .chat_popup_start img {
@@ -237,6 +237,8 @@ textarea:focus, input:focus{
     position: relative;
     display: block;
     margin-top: 20px;
+    font-size: 1.2rem;
+    text-align: center;
 
 }
 
@@ -275,15 +277,16 @@ textarea:focus, input:focus{
     
     position: fixed;
     display: block;
-    bottom: 50px;
+    bottom: 35px;
     left: 50%;
     margin-left: -20px;
 }
 
 .speech_indicator img {
     display: block;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
+   
 }
 
 </style>

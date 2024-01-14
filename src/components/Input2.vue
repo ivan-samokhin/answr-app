@@ -21,7 +21,7 @@ import { RouterLink, RouterView } from 'vue-router'
           
           <label for="loginPassword">Date of birth</label>
         </div>
-        <button>Accept</button>
+        <RouterLink class="answr_button_generic" to="/capcha">Continue</RouterLink>
       </form>
 </template>
 

@@ -128,7 +128,7 @@ nav a:first-of-type {
   border: 0;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 500px) {
   header {
     display: flex;
     place-items: center;
@@ -238,8 +238,6 @@ nav a:first-of-type {
   left: 50%;
   margin-left: -110px;
 }
-.swiper-scrollbar-drag { color: white;}
-.swiper-button-prev, .swiper-button-next {color: white;}
 
 }
 

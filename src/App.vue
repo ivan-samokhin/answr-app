@@ -35,37 +35,37 @@ export default {
                <img class="nav_icon_image" src="\divider_svg_.svg" alt="">
             </li>
             <li class="nav_icon_item">
-               <img class="nav_icon_image" src="\gear_svg_.svg" alt="">
+               <img class="nav_icon_image" src="\icons\wheel.svg" alt="">
             </li>
             <li class="nav_icon_item">
-               <img class="nav_icon_image" src="\write_svg_.svg" alt="">
+               <img class="nav_icon_image img_color_test" src="\icons\write.svg" alt="">
             </li>
            <li class="nav_icon_item" @mouseover="hoverMic=true" @mouseleave="hoverMic=false" @click="micActivated=true">
-               <img class="nav_icon_image" src="\mic_svg_.svg" alt="">
+               <img class="nav_icon_image" src="\icons\mic.svg" alt="">
             </li>
         </ul>
 
         <ul class="nav_icons_list icons_center">
             <li class="nav_icon_item" @mouseover="hoverAvatar=true" @mouseleave="hoverAvatar=false" @click="avatarOn=!avatarOn">
-               <img class="nav_icon_image" src="\person_svg_.svg" alt="">
+               <img class="nav_icon_image" src="\icons\account.svg" alt="">
             </li>
             <li class="nav_icon_item" @mouseover="hoverCam=true" @mouseleave="hoverCam=false">
-               <img class="nav_icon_image" src="\cam_svg_.svg" alt="">
+               <img class="nav_icon_image" :class="{'highlited':hoverCam}" src="\icons\cam.svg" alt="">
             </li>
            <li class="nav_icon_item">
-               <img class="nav_icon_image" src="\talk_svg_.svg" alt="">
+               <img class="nav_icon_image" src="\icons\sound.svg" alt="">
             </li>
         </ul>
 
         <ul class="nav_icons_list icons_right">
             <li class="nav_icon_item">
-               <img class="nav_icon_image" src="\plus_svg_.svg" alt="">
+               <img class="nav_icon_image" src="\icons\plus.svg" alt="">
             </li>
             <li class="nav_icon_item">
-               <img class="nav_icon_image" src="\arrow_svg_.svg" alt="">
+               <img class="nav_icon_image" src="\icons\download.svg" alt="">
             </li>
            <li class="nav_icon_item">
-               <img class="nav_icon_image" src="\question_svg_.svg" alt="">
+               <img class="nav_icon_image" src="\icons\help.svg" alt="">
             </li>
         </ul>
         <!--<RouterLink class="answr_routerlink" to="/speech">Dictation_test</RouterLink>
@@ -156,11 +156,14 @@ nav a:first-of-type {
   }
 
   .nav_icon_image {
-    width: 25px;
-    height: 25px;
-    color: white;
+    width: 20px;
+    height: 20px;
     display: block;
-   
+    filter: invert(94%) sepia(94%) saturate(26%) hue-rotate(31deg) brightness(107%) contrast(106%);
+  }
+
+  .nav_icon_image:hover {
+    filter: invert(91%) sepia(12%) saturate(1410%) hue-rotate(93deg) brightness(103%) contrast(92%) !important;
   }
 
   .image_cassandra {
@@ -237,6 +240,10 @@ nav a:first-of-type {
 .avatar_hover {
   left: 50%;
   margin-left: -110px;
+}
+
+.highlited {
+  filter: invert(50%) sepia(58%) saturate(4177%) hue-rotate(163deg) brightness(98%) contrast(101%);
 }
 
 }

@@ -2,6 +2,7 @@
 import App from '@/App.vue';
 import { setTransitionHooks, toHandlers } from 'vue';
 import { RouterLink, RouterView } from 'vue-router'
+ 
 </script>
 
 <template>
@@ -168,5 +169,10 @@ span {
 .navbar-enter-from, 
 .navbar-leave-to {
   opacity: 0;
+}
+
+.answr_button_generic:hover {
+    background-color: hsla(160, 100%, 37%, 0.2);
+
 }
 </style>

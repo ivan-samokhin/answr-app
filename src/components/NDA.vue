@@ -75,6 +75,11 @@ export default {
     color: white;
     box-shadow: 2px 2px 5px #282828;
     border-radius: 5px;
+    transition: 0.4s;
+}
+.answr_button_generic:hover {
+    background-color: hsla(160, 100%, 37%, 0.2);
+
 }
 
 .answr_text {

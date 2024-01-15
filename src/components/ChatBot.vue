@@ -156,7 +156,7 @@ props: {
 
 .answr_chatbot_message p {
     margin: 5px;
-    font-weight: 200;
+    font-weight: 300;
 }
 
 .answr_chat_main {

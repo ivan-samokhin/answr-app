@@ -1,5 +1,16 @@
 @import './base.css';
 
+@font-face {
+  font-family: FK_Display;
+  src: url('C:\Users\ivan.EXTON\Documents\VueApps\answr-app\public\assets\FKDisplay-Regular.otf');
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url('public\assets\Roboto-Regular.ttf');
+}
+
+
 #app {
   max-width: 1280px;
   margin: 0 auto;
@@ -17,6 +28,7 @@ a,
 
 body {
   background: linear-gradient(0deg, rgba(41,42,53,1) 15%, rgba(49,103,109,1) 100%);
+  font-family: Roboto;
 }
 
 @media (hover: hover) {
@@ -49,6 +61,7 @@ body {
   margin: 15px auto;
   text-align: center;
   margin-bottom: 0px;
+  font-family: FK_Display;
 }
 img.answr_logo {
   width: 60px;

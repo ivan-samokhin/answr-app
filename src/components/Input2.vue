@@ -72,7 +72,7 @@ input textarea {
 label {
     position:relative;
     left: 10px;
-    top: -50px;
+    top: -48px;
     color: #87f5d3;
     font-size: 0.5rem;
 }

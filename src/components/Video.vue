@@ -47,7 +47,7 @@ export default {
                 'test_video.mp4',
                 'test_video.mp4',
                 'test_video.mp4',
-                'test_video.mp4'
+                'audiowaves.mp4'
             ]
         }
            

@@ -26,7 +26,7 @@ import 'swiper/css/scrollbar'
         
         >
             <SwiperSlide v-for="video in videos">
-                <video width="400" autoplay muted loop playsinline>
+                <video width="400" controls autoplay muted loop playsinline>
                     <source :src="video" type="video/mp4">
                 </video>
             </SwiperSlide>
@@ -86,14 +86,14 @@ export default {
     padding-bottom: 20px;
     position: fixed;
     left: 50%;
-    top: 13%;
+    top: 10%;
     margin-left: -220px;
 }
 
 
 .swiper {
     width: 400px;
-    height: 350px;
+    height: 400px;
     
 }
 

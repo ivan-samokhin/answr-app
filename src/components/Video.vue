@@ -26,7 +26,7 @@ import 'swiper/css/scrollbar'
         
         >
             <SwiperSlide v-for="video in videos">
-                <video width="400" controls autoplay muted loop playsinline>
+                <video width="400" autoplay muted loop playsinline>
                     <source :src="video" type="video/mp4">
                 </video>
             </SwiperSlide>
@@ -47,17 +47,17 @@ export default {
     data() {
         return {
             videos: [
-                '/video/01.mov',
-                '/video/02.mov',
-                '/video/03.mov',
-                '/video/04.mov',
-                '/video/05.mov',
-                '/video/06.mov',
-                '/video/07.mov',
-                '/video/08.mov',
-                '/video/09.mov',
-                '/video/11.mov',
-                '/video/11.mov'
+                '/video/01.mp4',
+                '/video/02.mp4',
+                '/video/03.mp4',
+                '/video/04.mp4',
+                '/video/05.mp4',
+                '/video/06.mp4',
+                '/video/07.mp4',
+                '/video/08.mp4',
+                '/video/09.mp4',
+                '/video/10.mp4',
+                '/video/11.mp4'
             ],
             toGrey: false
         }
@@ -93,7 +93,7 @@ export default {
 
 .swiper {
     width: 400px;
-    height: 400px;
+    height: 350px;
     
 }
 

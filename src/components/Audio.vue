@@ -49,11 +49,11 @@ export default {
                 'Contemporary RP Woman'
             ],
             videos:[
-                'audiowaves.mp4',
-                'audiowaves.mp4',
-                'audiowaves.mp4',
-                'audiowaves.mp4',
-                'audiowaves.mp4'
+                '/audiowaves.mp4',
+                '/audiowaves.mp4',
+                '/audiowaves.mp4',
+                '/audiowaves.mp4',
+                '/audiowaves.mp4'
             ] 
         }
            

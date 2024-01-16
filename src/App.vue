@@ -43,7 +43,7 @@ export default {
             <li class="nav_icon_item">
                <img class="nav_icon_image img_color_test" src="\icons\write.svg" alt="">
             </li>
-           <li class="nav_icon_item" @mouseover="hoverMic=true" @mouseleave="hoverMic=false" @click="micActivated=true">
+           <li class="nav_icon_item" @mouseover="hoverMic=true" @mouseleave="hoverMic=false" @click="micActivated=!micActivated">
                <img class="nav_icon_image" :class="{'highlited':micActivated}" src="\icons\mic.svg" alt="">
             </li>
         </ul>

@@ -31,7 +31,7 @@ import 'swiper/css/scrollbar'
         </Swiper>
      
         </div>
-        <button class="answr_button_generic voice_button">Apply voice</button>
+        <button class="answr_button_generic voice_button" @click="$emit('myEvent')">Apply voice</button>
     </div>
 </template>     
 

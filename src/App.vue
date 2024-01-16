@@ -94,7 +94,7 @@ export default {
   <!-- <Capcha/>-->
   <router-view :micActive="micActivated"/>
   <Transition><Video v-if="avatarOn"></Video></Transition>
-  <Transition><Audio v-if="voiceOn"></Audio></Transition>
+  <Transition><Audio v-if="voiceOn" @my-event="voiceOn=false"></Audio></Transition>
   
   <!--<button @click="console.log(isLoggedIn)" type="">Test</button>-->
 </div>
@@ -216,7 +216,7 @@ nav a:first-of-type {
 
 .v-enter-active,
 .v-leave-active {
-  transition: opacity 0.5s ease !important;
+  transition: opacity 0.3s ease !important;
 }
 
 .v-enter-from,

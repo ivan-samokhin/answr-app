@@ -28,7 +28,7 @@ import { isLoggedIn } from './Capcha.vue'
     </form>
 </div>
 <Transition name="dictation">
-<div class="speech_indicator" @click="startSpeechToTxt" v-if="micActive"> <img src="\mic_svg_.svg" alt=""></div>
+<div class="speech_indicator" @click="startSpeechToTxt" v-if="micActive"> <img src="\icons\mic.svg" alt=""></div>
 </Transition>
 
 

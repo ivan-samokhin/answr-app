@@ -28,7 +28,7 @@ import { isLoggedIn } from './Capcha.vue'
     </form>
 </div>
 <Transition name="dictation">
-<div class="speech_indicator" @click="startSpeechToTxt" v-if="micActive"> <img src="\icons\mic.svg" alt=""></div>
+<div class="speech_indicator" @click="startSpeechToTxt" v-if="micActive"> <img class="" :class="{'highlited': speechActive}" src="\icons\mic.svg" alt=""></div>
 </Transition>
 
 
@@ -122,6 +122,8 @@ methods: {
        
       this.runtimeTranscription_ = text;
       this.userInput = text;
+      this.speechActive = false;
+      
     });
     // end of transcription
     recognition.addEventListener("end", () => { recognition.stop(); this.speechActive = false; this.HandleChatInput()});
@@ -287,7 +289,10 @@ textarea:focus, input:focus{
     display: block;
     width: 40px;
     height: 40px;
-   
+    filter: invert(94%) sepia(94%) saturate(26%) hue-rotate(31deg) brightness(107%) contrast(106%);
 }
 
+.highlited {
+  filter: invert(91%) sepia(12%) saturate(1410%) hue-rotate(93deg) brightness(103%) contrast(92%) !important;
+}
 </style>

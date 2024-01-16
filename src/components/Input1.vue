@@ -20,7 +20,7 @@ import { RouterLink, RouterView } from 'vue-router'
           />
           <label class="answr_generic_label" for="loginPassword">Password</label>
         </div>
-        <div class="input-group answr_input_field" @click="checkboxPulse">
+        <!--<div class="input-group answr_input_field" @click="checkboxPulse">
           <input
             type="checkbox"
             name="mycheckbox"
@@ -29,7 +29,7 @@ import { RouterLink, RouterView } from 'vue-router'
           />
           <label class="answr_checkbox_label" for="loginPassword">I'm not a robot</label>
           <img class="nav_icon_image" src="\infinity.svg" alt="" :class="{'checkbox_clicked': checkboxClicked, 'change_color': changeColor}">
-        </div>
+        </div>-->
         <RouterLink class="answr_button_generic" to="/cassandra/dob">Continue</RouterLink>
       </form>
 </template>

@@ -1,13 +1,13 @@
 @import './base.css';
 
 @font-face {
-  font-family: FK_Display;
-  src: url('C:\Users\ivan.EXTON\Documents\VueApps\answr-app\public\assets\FKDisplay-Regular.otf');
+  font-family: "FKDisplay";
+  src: url('public/assets/FKDisplay-Regular.otf');
 }
 
 @font-face {
   font-family: Roboto;
-  src: url('public\assets\Roboto-Regular.ttf');
+  src: url('public/assets/Roboto-Regular.ttf');
 }
 
 
@@ -61,7 +61,7 @@ body {
   margin: 15px auto;
   text-align: center;
   margin-bottom: 0px;
-  font-family: FK_Display;
+  font-family: FKDisplay;
 }
 img.answr_logo {
   width: 60px;

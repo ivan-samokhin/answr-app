@@ -27,7 +27,7 @@ import { RouterLink, RouterView } from 'vue-router'
         <img :class="{active_element: images[index+5].isActive}" :src="images[index+5].url" alt="x">
     </li>
 </ul>
-<RouterLink @click="isLoggedIn=true" class="answr_button_generic" to="/nda">Verify</RouterLink>
+<RouterLink @click="isLoggedIn=true" class="answr_button_generic" to="/cassandra/nda">Verify</RouterLink>
 </div>
 
 </div>

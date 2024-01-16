@@ -5,28 +5,28 @@ import Input1 from '../components/Input1.vue'
 import Input2 from '../components/Input2.vue'
 import NDA from '../components/NDA.vue'
 import Speech from '../components/Speech.vue'
-import Video from '../components/Video.vue'
+import Grey from '../components/Grey.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: '/capcha',
+      path: '/cassandra/capcha',
       name: 'Capcha',
       component: Capcha
     },
     {
-      path: '/cassandra',
+      path: '/cassandra/chat',
       name: 'Cassandra',
       component: ChatBot
     },
     {
-      path: '/',
+      path: '/cassandra/login',
       name: 'login',
       component: Input1
     },
     {
-      path: '/dob',
+      path: '/cassandra/dob',
       name: 'dob',
       component: Input2
     },
@@ -35,12 +35,12 @@ const router = createRouter({
       component: Speech
     },
     {
-      path: '/nda',
+      path: '/cassandra/nda',
       component: NDA
     },
     {
-      path: '/video',
-      component: Video
+      path: '/grey',
+      component: Grey
     }
   ]
 })

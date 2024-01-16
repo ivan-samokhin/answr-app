@@ -3,6 +3,7 @@ import { RouterLink, RouterView } from 'vue-router'
 import Capcha from './components/Capcha.vue'
 import ChatBot from './components/ChatBot.vue'
 import Video from './components/Video.vue'
+import Audio from './components/Audio.vue'
 
 </script>
 <script>
@@ -15,7 +16,9 @@ export default {
       hoverMic: false,
       micActivated: false,
       avatarOn: false,
-      hoverAvatar: false
+      voiceOn: false,
+      hoverAvatar: false,
+      hoverVoice: false
       
   }
 }
@@ -41,19 +44,19 @@ export default {
                <img class="nav_icon_image img_color_test" src="\icons\write.svg" alt="">
             </li>
            <li class="nav_icon_item" @mouseover="hoverMic=true" @mouseleave="hoverMic=false" @click="micActivated=true">
-               <img class="nav_icon_image" src="\icons\mic.svg" alt="">
+               <img class="nav_icon_image" :class="{'highlited':micActivated}" src="\icons\mic.svg" alt="">
             </li>
         </ul>
 
         <ul class="nav_icons_list icons_center">
             <li class="nav_icon_item" @mouseover="hoverAvatar=true" @mouseleave="hoverAvatar=false" @click="avatarOn=!avatarOn">
-               <img class="nav_icon_image" src="\icons\account.svg" alt="">
+               <img class="nav_icon_image" :class="{'highlited':avatarOn}" src="\icons\account.svg" alt="">
             </li>
             <li class="nav_icon_item" @mouseover="hoverCam=true" @mouseleave="hoverCam=false">
                <img class="nav_icon_image" :class="{'highlited':hoverCam}" src="\icons\cam.svg" alt="">
             </li>
-           <li class="nav_icon_item">
-               <img class="nav_icon_image" src="\icons\sound.svg" alt="">
+           <li class="nav_icon_item" @mouseover="hoverVoice=true" @mouseleave="hoverVoice=false" @click="voiceOn=!voiceOn">
+               <img class="nav_icon_image" :class="{'highlited':voiceOn}" src="\icons\sound.svg" alt="">
             </li>
         </ul>
 
@@ -75,9 +78,11 @@ export default {
 
       </nav>
 
-      <div class="hoverbox" v-if="hoverCam"></div>
+      <div class="hoverbox" v-if="hoverCam"><p>Enable Camera</p></div>
       <div class="hoverbox mic_hover" v-if="hoverMic"><p>Enable dictation</p></div>
-      <div class="hoverbox avatar_hover" v-if="hoverAvatar"><p>Choose avatar</p></div>
+      <div class="hoverbox avatar_hover" v-if="hoverAvatar && !avatarOn"><p>Choose avatar</p></div>
+      <div class="hoverbox voice_hover" v-if="hoverVoice && !voiceOn"><p>Choose voice</p></div>
+      
 
     </div>
   </header>
@@ -88,10 +93,12 @@ export default {
   <!-- <ChatBot/> -->
   <!-- <Capcha/>-->
   <router-view :micActive="micActivated"/>
-  <Transition  ><Video v-if="avatarOn"></Video></Transition>
+  <Transition><Video v-if="avatarOn"></Video></Transition>
+  <Transition><Audio v-if="voiceOn"></Audio></Transition>
   
   <!--<button @click="console.log(isLoggedIn)" type="">Test</button>-->
 </div>
+<footer><p>Terms of use | Privacy policy</p></footer>
 </template>
 
 <style scoped>
@@ -209,12 +216,12 @@ nav a:first-of-type {
 
 .v-enter-active,
 .v-leave-active {
-  transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease !important;
 }
 
 .v-enter-from,
 .v-leave-to {
-  opacity: 0;
+  opacity: 0 !important;
 }
 .hoverbox {
     position: fixed;
@@ -242,8 +249,27 @@ nav a:first-of-type {
   margin-left: -110px;
 }
 
+.voice_hover {
+  left: 50%;
+  margin-left: -50px;
+}
+
 .highlited {
-  filter: invert(50%) sepia(58%) saturate(4177%) hue-rotate(163deg) brightness(98%) contrast(101%);
+  filter: invert(91%) sepia(12%) saturate(1410%) hue-rotate(93deg) brightness(103%) contrast(92%);
+}
+
+footer {
+  color: #999a9f;
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  margin-left: -100px;
+}
+
+footer p {
+  width: 200px;
+  text-align: center;
+  font-size: 0.5rem;
 }
 
 }

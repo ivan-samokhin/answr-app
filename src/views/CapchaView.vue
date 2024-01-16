@@ -1,5 +1,6 @@
 <script>
-import Capcha from '../components/Capcha.vue'
+
+
 </script>
 
 <template>

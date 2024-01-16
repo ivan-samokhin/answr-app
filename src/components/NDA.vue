@@ -22,14 +22,30 @@ import { RouterLink, RouterView } from 'vue-router'
     <p>
         The obligations set forth in this Agreement shall not apply to information that: Is or becomes publicly available through no fault of the Receiving Party. Is independently developed by the Receiving Party without reference to or use of the Confidential Information. Is rightfully obtained by the Receiving Party from a third party without restriction. The obligations of confidentiality under this Agreement shall remain in effect for a period of 50 years from the date of disclosure.
     </p>
+    <h4>User Account</h4>
+    <p>
+        When You create an account with Us, You must provide Us information that is accurate, complete, and current at all times. Failure to do so constitutes a breach of the Terms, which may result in immediate termination of Your account on Our Service. You are responsible for safeguarding the password that You use to access the Service and for any activities or actions under Your password, whether Your password is with Our Service or a Third-Party Social Media Service. You agree not to disclose Your password to any third party. You must notify Us immediately upon becoming aware of any breach of security or unauthorized use of Your account. You may not use as a username the name of another person or entity or that is not lawfully available for use, a name or trademark that is subject to any rights of another person or entity other than You without appropriate authorization, or a name that is otherwise offensive, vulgar or obscene.
+    </p>
+    <p>
+        Notwithstanding any damages that You might incur, the entire liability of the Company and any of its suppliers under any provision of this Terms and Your exclusive remedy for all of the foregoing shall be limited to the amount actually paid by You through the Service or 100 USD if You haven't purchased anything through the Service. To the maximum extent permitted by applicable law, in no event shall the Company or its suppliers be liable for any special, incidental, indirect, or consequential damages whatsoever (including, but not limited to, damages for loss of profits, loss of data or other information, for business interruption, for personal injury, loss of privacy arising out of or in any way related to the use of or inability to use the Service, third-party software and/or third-party hardware used with the Service, or otherwise in connection with any provision of this Terms), even if the Company or any supplier has been advised of the possibility of such damages and even if the remedy fails of its essential purpose. Some states do not allow the exclusion of implied warranties or limitation of liability for incidental or consequential damages, which means that some of the above limitations may not apply. In these states, each party's liability will be limited to the greatest extent permitted by law
+    </p>
     <h4>Return or Destruction of Information:</h4>
     <p>
         Upon the Disclosing Party's written request, or the termination of the Receiving Party's need for the Confidential Information, the Receiving Party shall promptly return or destroy all copies of the Confidential Information. This Agreement constitutes the entire understanding between the Parties and supersedes all prior agreements, whether written or oral. By clicking the continue button seen below the recipient agrees to the terms above.
     </p>
-    
+
+    <div class="nda_agree" @click="">
+          <input
+            type="checkbox"
+            name="nda_checkbox"
+            class="checkBox"
+            required
+          />
+          <label class="answr_checkbox_label" for="loginPassword">Agree to terms and conditions</label>
+    </div>
 </div>
 </div>
-<RouterLink @click="isLoggedIn=true" class="answr_button_generic" to="/cassandra">Agree</RouterLink>
+<RouterLink @click="isLoggedIn=true" class="answr_button_generic" to="/cassandra/chat">Continue</RouterLink>
 </div>
 
 </div>
@@ -128,5 +144,24 @@ export default {
   background: #888;
   border-radius: 5px;
 }
+.nda_agree {
+    display: inline-flex;
+    padding: 10px 20px;
+    border: 1px solid white;
+    border-radius: 2px;
+}
+
+.checkBox {
+    accent-color: #87f5d3;
+}
+
+.answr_checkbox_label {
+   margin-left: 20px;
+   color:#87f5d3;
+   font-size: 0.8rem;
+   position:relative;
+   top: 0px;
+}
+
 
 </style>

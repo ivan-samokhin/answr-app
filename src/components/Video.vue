@@ -33,8 +33,11 @@ import 'swiper/css/scrollbar'
         </Swiper>
      
         </div>
-        <button class="answr_button_generic">Accept</button>
+       
+        <RouterLink class="answr_button_generic" to="" @click="toGrey=true">Accept</RouterLink>
+        <div v-if="toGrey" :class="{'grey_screen': toGrey}"></div>
     </div>
+    
 </template>     
 
 <script>
@@ -44,11 +47,19 @@ export default {
     data() {
         return {
             videos: [
-                'test_video.mp4',
-                'test_video.mp4',
-                'test_video.mp4',
-                'audiowaves.mp4'
-            ]
+                '/video/01.mov',
+                '/video/02.mov',
+                '/video/03.mov',
+                '/video/04.mov',
+                '/video/05.mov',
+                '/video/06.mov',
+                '/video/07.mov',
+                '/video/08.mov',
+                '/video/09.mov',
+                '/video/11.mov',
+                '/video/11.mov'
+            ],
+            toGrey: false
         }
            
     },
@@ -75,14 +86,14 @@ export default {
     padding-bottom: 20px;
     position: fixed;
     left: 50%;
-    top: 20%;
+    top: 13%;
     margin-left: -220px;
 }
 
 
 .swiper {
     width: 400px;
-    height: 250px;
+    height: 350px;
     
 }
 
@@ -97,6 +108,14 @@ button {
   margin-bottom: 20px;
 }
 
-
+.grey_screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #eee;
+    z-index: 100;
+}
 
 </style>

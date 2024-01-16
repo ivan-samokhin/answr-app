@@ -1,8 +1,9 @@
 @import './base.css';
 
+
 @font-face {
-  font-family: "FKDisplay";
-  src: url('public/assets/FKDisplay-Regular.ttf');
+  font-family: "Montserrat";
+  src: url('public/assets/Montserrat-Regular.ttf');
 }
 
 @font-face {
@@ -61,7 +62,7 @@ body {
   margin: 15px auto;
   text-align: center;
   margin-bottom: 0px;
-  /*font-family: FKDisplay;*/
+  font-family: Montserrat;
 }
 img.answr_logo {
   width: 60px;
@@ -73,8 +74,18 @@ img.answr_logo {
 }
 
 .swiper-button-next, .swiper-button-prev {
-  color: white  !important;
+  color: white  !important; 
 }
+
+.audio_wrapper .swiper-button-next, .audio_wrapper .swiper-button-prev {
+  top: 12% !important; 
+}
+
+.audio_wrapper .swiper-button-next::after, .audio_wrapper .swiper-button-prev::after {
+  font-size: 0.6rem !important;
+}
+
+
 .swiper-scrollbar-drag {
   background-color: white !important;
 }

@@ -122,7 +122,7 @@ methods: {
        
       this.runtimeTranscription_ = text;
       this.userInput = text;
-      this.speechActive = false;
+    
       
     });
     // end of transcription

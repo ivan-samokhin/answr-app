@@ -203,6 +203,7 @@ props: {
 
 .reverse {
     flex-direction: column-reverse;
+    transition: transform 2s ease-in-out;
 }
 
 input, textarea {

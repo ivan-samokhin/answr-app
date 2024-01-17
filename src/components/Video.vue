@@ -47,14 +47,15 @@ export default {
     data() {
         return {
             videos: [
-                '/video/01.mp4',
+                '/video/06.mp4',
+                '/video/05.mp4',
+                '/video/04.mp4',
                 '/video/02.mp4',
                 '/video/03.mp4',
-                '/video/04.mp4',
-                '/video/05.mp4',
-                '/video/Cass.mp4'
-                //'/video/06.mp4',
-                //'/video/07.mp4',
+                '/video/08.mp4',
+                '/video/Cass.mp4',
+                '/video/11.mp4',
+                '/video/09.mp4'
                 //'/video/08.mp4',
                 //'/video/09.mp4',
                 //'/video/10.mp4',

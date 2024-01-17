@@ -243,7 +243,7 @@ nav a:first-of-type {
 }
 
 .mic_hover {
-  left: 290px;
+  left: 270px;
 }
 
 .avatar_hover {

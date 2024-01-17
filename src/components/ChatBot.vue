@@ -57,9 +57,7 @@ export default {
         "Please go to the tool bar and enable your camera? 🙏",
         'If you go to the pull-down tab and select a voice, I can explain the program.',
         'I\'m sorry about that.','I apologize for that, Colton.',
-        'You can choose an Avatar for me and enable your dictation, rather than typing. Then we can talk to each other, like two people.',
-        'Hello, Colton. You can choose from a selection of Avatars for me.',
-        ''
+        'You can choose an Avatar for me and enable your dictation, rather than typing. Then we can talk to each other, like two people.'
         ],
       displayMsg: ['', '', ''],
       userInput: '',

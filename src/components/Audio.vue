@@ -85,7 +85,7 @@ export default {
     top: 5.5%;
     margin-left: -120px;
     width: 300px;
-    height: 200px;
+    height: 210px;
 }
 
 
@@ -99,7 +99,7 @@ export default {
     margin: auto;
     border: 1px solid rgba(52, 53, 64, 1);
     position: relative;
-    top: -20px;
+    top: 0px;
 }
 
 
@@ -131,10 +131,10 @@ button {
     padding: 5px 10px;
     border-radius: 2px;
     font-size: 0.7rem;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
     position: relative;
     z-index: 20;
-    top: -40px;
+    top: -10px;
 }
 
 .voice_text {

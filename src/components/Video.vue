@@ -34,7 +34,7 @@ import 'swiper/css/scrollbar'
      
         </div>
        
-        <RouterLink class="answr_button_generic" to="" @click="toGrey=true">Accept</RouterLink>
+        <RouterLink class="answr_button_generic" to="" @click="toGrey=true, $emit('goGrey')">Accept</RouterLink>
         <div v-if="toGrey" :class="{'grey_screen': toGrey}"></div>
     </div>
     

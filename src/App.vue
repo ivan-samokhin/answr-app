@@ -18,7 +18,8 @@ export default {
       avatarOn: false,
       voiceOn: false,
       hoverAvatar: false,
-      hoverVoice: false
+      hoverVoice: false,
+      footerOff: false
       
   }
 }
@@ -93,12 +94,13 @@ export default {
   <!-- <ChatBot/> -->
   <!-- <Capcha/>-->
   <router-view :micActive="micActivated"/>
-  <Transition><Video v-if="avatarOn"></Video></Transition>
+  <Transition><Video v-if="avatarOn" @go-grey="footerOff=true"></Video></Transition>
   <Transition><Audio v-if="voiceOn" @my-event="voiceOn=false"></Audio></Transition>
   
   <!--<button @click="console.log(isLoggedIn)" type="">Test</button>-->
+  <footer v-if="!footerOff"><p>Terms of use | Privacy policy</p></footer>
 </div>
-<footer><p>Terms of use | Privacy policy</p></footer>
+
 </template>
 
 <style scoped>
@@ -264,6 +266,7 @@ footer {
   bottom: 10px;
   left: 50%;
   margin-left: -100px;
+  z-index: 10;
 }
 
 footer p {

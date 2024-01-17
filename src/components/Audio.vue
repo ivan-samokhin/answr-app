@@ -50,8 +50,8 @@ export default {
             ],
             videos:[
                 '/audiowaves.mp4',
-                '/audiowaves.mp4',
-                '/audiowaves.mp4',
+                '/voice2.mp4',
+                '/voice3.mp4',
                 '/audiowaves.mp4',
                 '/audiowaves.mp4'
             ] 

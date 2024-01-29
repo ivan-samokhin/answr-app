@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@vueuse/motion": "^2.0.0",
     "swiper": "^11.0.5",
     "vue": "^3.3.11",
     "vue-audio-visual": "^3.0.7",

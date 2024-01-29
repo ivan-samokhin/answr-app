@@ -7,8 +7,20 @@ import NDA from '../components/NDA.vue'
 import Speech from '../components/Speech.vue'
 import Grey from '../components/Grey.vue'
 
+import Home from '../components/Home.vue'
+import About from '../components/About.vue'
+import Cassandra from '../components/Cassandra.vue'
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
+  scrollBehavior(to, from, savedPosition) {
+    if (to.hash) {
+      return {
+        el: to.hash,
+        behavior: 'smooth',
+      }
+    }
+  },
   routes: [
     {
       path: '/cassandra/capcha',
@@ -41,7 +53,21 @@ const router = createRouter({
     {
       path: '/grey',
       component: Grey
-    }
+    },
+    {
+      path: '/',
+      component: Home
+    },
+    {
+      path: '/about',
+      component: About
+    },
+    {
+      path: '/cassandra',
+      component: Cassandra
+    },
+    
+
   ]
 })
 

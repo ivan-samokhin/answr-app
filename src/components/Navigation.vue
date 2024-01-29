@@ -218,7 +218,7 @@ export default {
     height: 25px;
   }
   .main_icons_left {
-    left: 10px;
+    left: 50px;
   }
   .main_icons_center {
     left: 50%;
@@ -226,7 +226,7 @@ export default {
   }
 
   .main_icons_right {
-    right: 30px;
+    right: 80px;
     margin-left: 0;
   }
 

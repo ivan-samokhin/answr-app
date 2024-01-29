@@ -20,7 +20,7 @@ import Navigation from '../components/Navigation.vue'
 export default {
     data() {
         return {
-            navWhite: false
+            navWhite: true
         }
     },
     methods: {

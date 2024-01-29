@@ -9,12 +9,12 @@ import { isLoggedIn } from './Capcha.vue'
 <div>
     <ul class='answr_chat_main' ref="chatList">
         <li v-for = 'index in messageCount' class="answr_chatbot_message">
-            <p><h4>Colton</h4>
+            <p v-if="userMessages[index-1] != 0"><h4>Silas</h4>
                 {{ userMessages[index-1] }}
             </p>
             <p>
                 <h4>Cassandra</h4>
-                {{ displayMsg[index-1] }}
+                {{ displayMsg[index-1] }} <span v-if="index==messageCount" class="cursor">|</span>
             </p>
         </li> 
     </ul>
@@ -51,13 +51,10 @@ export default {
     return {
       messageCount: 0,
       botMessages: [
-        'Are you Colton?', 
-        'You signed up.',
-        "It\'s nice to meet you, Colton. 😊",
-        "Please go to the tool bar and enable your camera? 🙏",
-        'If you go to the pull-down tab and select a voice, I can explain the program.',
-        'I\'m sorry about that.','I apologize for that, Colton.',
-        'You can choose an Avatar for me and enable your dictation, rather than typing. Then we can talk to each other, like two people.'
+        'Hello, Silas. How can I help you today?', 
+        'You may call me Cassandra, if you’d like.',
+        'As an AI language model I don’t have preferences. You can choose my name, voice and avatar, by using the bar tab at the top of your screen.',
+        ' '
         ],
       displayMsg: ['', '', ''],
       userInput: '',
@@ -67,7 +64,8 @@ export default {
       runtimeTranscription_: "",
       transcription_: [],
       lang_: "en-EN",
-      speechActive: false
+      speechActive: false,
+      delay: 1000
     }
 },
 methods: {
@@ -87,10 +85,12 @@ methods: {
         if(this.chatEmpty){this.chatEmpty=false}
         if(this.messageCount < this.botMessages.length ) {
             this.messageCount++
-            setTimeout(() => this.typewriter (this.botMessages[this.messageCount-1]), 300)
+            if(this.messageCount==3) {this.delay=5000}
+            setTimeout(() => this.typewriter (this.botMessages[this.messageCount-1]), this.delay)
             this.userMessages.push(this.userInput)
             this.userInput=''
-        }   
+        } 
+         
     },
 
     flipChat() {
@@ -294,4 +294,19 @@ textarea:focus, input:focus{
 .highlited {
   filter: invert(91%) sepia(12%) saturate(1410%) hue-rotate(93deg) brightness(103%) contrast(92%) !important;
 }
+
+.cursor {
+  display: inline-block;
+  width: 2px;
+  color: #ccc;
+  
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% {color: #ccc;}
+  50% {color: transparent;}
+  100% {color: #ccc;}
+}
+
 </style>
